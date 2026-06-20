@@ -1,0 +1,98 @@
+{
+  "Linux": {
+    "Deno": [
+      {
+        "version": "Latest",
+        "commands": "curl -fsSL https://deno.land/install.sh | sh"
+      }
+    ],
+    "NodeJS": [
+      {
+        "version": "24",
+        "commands": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash && . \"$HOME/.nvm/nvm.sh\" && nvm install 24"
+      }
+    ],
+    "PHP, Composer, Laravel": [
+      {
+        "version": "Latest",
+        "commands": "/bin/bash -c \"$(curl -fsSL https://php.new/install/linux)\""
+      }
+    ],
+    "Swift": [
+      {
+        "version": "Latest",
+        "commands": "curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz && tar zxf swiftly-$(uname -m).tar.gz && ./swiftly init --quiet-shell-followup && . \"${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh\" && hash -r"
+      }
+    ],
+    "UV": [
+      {
+        "version": "Latest",
+        "commands": "curl -LsSf https://astral.sh/uv/install.sh | sh"
+      }
+    ]
+  },
+  "macOS": {
+    "Deno": [
+      {
+        "version": "Latest",
+        "commands": "curl -fsSL https://deno.land/install.sh | sh"
+      }
+    ],
+    "NodeJS": [
+      {
+        "version": "24",
+        "commands": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash && . \"$HOME/.nvm/nvm.sh\" && nvm install 24"
+      }
+    ],
+    "PHP, Composer, Laravel": [
+      {
+        "version": "Latest",
+        "commands": "/bin/bash -c \"$(curl -fsSL https://php.new/install/mac)\""
+      }
+    ],
+    "Swift": [
+      {
+        "version": "Latest",
+        "commands": "curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && ~/.swiftly/bin/swiftly init --quiet-shell-followup && . \"${SWIFTLY_HOME_DIR:-$HOME/.swiftly}/env.sh\" && hash -r"
+      }
+    ],
+    "UV": [
+      {
+        "version": "Latest",
+        "commands": "curl -LsSf https://astral.sh/uv/install.sh | sh"
+      }
+    ]
+  },
+  "Windows": {
+    "Deno": [
+      {
+        "version": "Latest",
+        "commands": "irm https://deno.land/install.ps1 | iex"
+      }
+    ],
+    "NodeJS": [
+      {
+        "version": "24",
+        "commands": "powershell -c \"irm https://community.chocolatey.org/install.ps1|iex\" && choco install nodejs --version=\"24.17.0\""
+      }
+    ],
+    "PHP, Composer, Laravel": [
+      {
+        "version": "Latest",
+        "commands": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows'))"
+      }
+    ],
+    "Swift": [
+      {
+        "version": "Latest",
+        "commands": "winget install --id Microsoft.VisualStudio.2022.Community --exact --force --custom \"--add Microsoft.VisualStudio.Component.Windows11SDK.22621 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64\" --source winget && winget install --id Swift.Toolchain -e --source winget"
+      }
+    ],
+    "UV": [
+      {
+        "version": "Latest",
+        "commands": "powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\""
+      }
+    ]
+  }
+}
