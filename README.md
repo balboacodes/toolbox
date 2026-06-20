@@ -1,6 +1,6 @@
 # Toolbox
 
-Toolbox is a utility to quickly get the commands you need to install all your CLI tools at once.
+Toolbox is a utility to quickly get the commands you need to install all your CLI tools at once. You can check it out [here](https://balboacodes.github.io/toolbox/).
 
 ## Contributing
 
