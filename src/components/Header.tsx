@@ -15,7 +15,7 @@ export default function Header() {
         <path d="M11 13h4" />
         <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
       </svg>
-      <span class="text-xl">Commands</span>
+      <span class="text-xl">Toolbox</span>
     </header>
   );
 }
