@@ -12,10 +12,16 @@
         "commands": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash && . \"$HOME/.nvm/nvm.sh\" && nvm install 24"
       }
     ],
-    "PHP, Composer, Laravel": [
+    "PHP (Fedora)": [
       {
         "version": "Latest",
-        "commands": "/bin/bash -c \"$(curl -fsSL https://php.new/install/linux)\""
+        "commands": "sudo dnf install -y php"
+      }
+    ],
+    "PHP (Ubuntu)": [
+      {
+        "version": "Latest",
+        "commands": "sudo apt update && sudo apt install -y php"
       }
     ],
     "Swift": [
@@ -44,10 +50,10 @@
         "commands": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash && . \"$HOME/.nvm/nvm.sh\" && nvm install 24"
       }
     ],
-    "PHP, Composer, Laravel": [
+    "PHP": [
       {
-        "version": "Latest",
-        "commands": "/bin/bash -c \"$(curl -fsSL https://php.new/install/mac)\""
+        "version": "8.5",
+        "commands": "curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash && brew install php@8.5 && brew link --force --overwrite php@8.5"
       }
     ],
     "Swift": [
@@ -76,10 +82,10 @@
         "commands": "powershell -c \"irm https://community.chocolatey.org/install.ps1|iex\" && choco install nodejs --version=\"24.17.0\""
       }
     ],
-    "PHP, Composer, Laravel": [
+    "PHP": [
       {
-        "version": "Latest",
-        "commands": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows'))"
+        "version": "8.5",
+        "commands": "powershell -c \"& ([ScriptBlock]::Create((irm 'https://www.php.net/include/download-instructions/windows.ps1'))) -Version 8.5\""
       }
     ],
     "Swift": [
