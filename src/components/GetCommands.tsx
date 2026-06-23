@@ -100,11 +100,7 @@ export default function GetCommands(
                     ))}
                 </Badges>
                 <div class="overflow-scroll">
-                  <code
-                    dangerouslySetInnerHTML={{ __html: commands.value }}
-                    class="mt-2"
-                  >
-                  </code>
+                  <code class="mt-2">{commands}</code>
                 </div>
               </div>
             </div>
