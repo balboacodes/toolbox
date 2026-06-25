@@ -1,4 +1,5 @@
 import { ReadonlySignal, Signal } from "@preact/signals";
+import { Fragment } from "preact";
 import { Tool } from "../app.tsx";
 import { Badge } from "./Badge.tsx";
 
@@ -28,10 +29,10 @@ export default function FilteredTools({
   return (
     <>
       {filteredTools.value.map((tool) => (
-        <>
+        <Fragment key={tool.name}>
           {tool.versions.map((version) => (
             <div
-              key={tool.name}
+              key={tool.name + version.version}
               class={`transition relative flex items-center justify-between outline -outline-offset-1 outline-gray-300 dark:outline-gray-500 hover:outline-gray-400 dark:hover:outline-gray-400 rounded-xl p-2 ${
                 selectedTools.value.has(tool.name) &&
                 "outline-2 -outline-offset-2 outline-lime-600 dark:outline-lime-600"
@@ -49,7 +50,7 @@ export default function FilteredTools({
               <Badge>{version.version}</Badge>
             </div>
           ))}
-        </>
+        </Fragment>
       ))}
     </>
   );
