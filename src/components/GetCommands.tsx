@@ -2,9 +2,11 @@ import { Signal, useComputed, useSignal } from "@preact/signals";
 import { Tool } from "../app.tsx";
 import { Badge, Badges } from "./Badge.tsx";
 
-export default function GetCommands(
-  { selectedTools }: { selectedTools: Signal<Map<string, Tool>> },
-) {
+export default function GetCommands({
+  selectedTools,
+}: {
+  selectedTools: Signal<Map<string, Tool>>;
+}) {
   const commands = useComputed(() =>
     selectedTools.value
       .values()
@@ -85,10 +87,7 @@ export default function GetCommands(
                 </button>
               </div>
               <div class="mt-3 text-center sm:mt-0 sm:text-left space-y-4">
-                <h3
-                  id="dialog-title"
-                  class="text-base font-semibold "
-                >
+                <h3 id="dialog-title" class="text-base font-semibold ">
                   Commands
                 </h3>
                 <Badges>

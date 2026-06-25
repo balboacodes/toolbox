@@ -19,12 +19,13 @@ const os = [
   },
 ];
 
-export default function SelectOs(
-  { onChange, selectedOs }: {
-    onChange: InputEventHandler<HTMLInputElement>;
-    selectedOs: Signal<string>;
-  },
-) {
+export default function SelectOs({
+  onChange,
+  selectedOs,
+}: {
+  onChange: InputEventHandler<HTMLInputElement>;
+  selectedOs: Signal<string>;
+}) {
   return (
     <div class="grid grid-cols-3 gap-2 rounded-xl p-2">
       {os.map((o) => (
