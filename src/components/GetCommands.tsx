@@ -96,7 +96,9 @@ export default function GetCommands(
                     .entries()
                     .toArray()
                     .map(([toolName, tool]) => (
-                      <Badge>{toolName} ({tool.version})</Badge>
+                      <Badge key={toolName}>
+                        {toolName} ({tool.version})
+                      </Badge>
                     ))}
                 </Badges>
                 <div class="overflow-scroll">

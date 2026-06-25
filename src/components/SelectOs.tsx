@@ -29,6 +29,7 @@ export default function SelectOs(
     <div class="grid grid-cols-3 gap-2 rounded-xl p-2">
       {os.map((o) => (
         <label
+          key={o.name}
           class={`transition relative flex justify-center rounded-xl ${
             selectedOs.value === o.name && "bg-gray-200 dark:bg-gray-700/50"
           }`}
